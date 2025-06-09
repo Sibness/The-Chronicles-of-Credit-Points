@@ -1,47 +1,23 @@
 using UnityEngine; // Brauchen wir für allgemeine Unity-Funktionen
 using System.Collections; // Brauchen wir für Coroutinen (z.B. für Textanzeige, später)
 
-
-
 public class InteractionController : MonoBehaviour
 {
     // Dies speichert das GameObject, mit dem der Spieler gerade interagieren kann (es muss in Reichweite sein)
     private GameObject currentInteractable = null;
-    // Referenz zum Rigidbody2D-Komponente des Spielers
-    private Rigidbody2D rb; 
-
-    // Geschwindigkeit, mit der sich der Spieler bewegt
-    public float moveSpeed = 5f; 
-
+    
     // Die Start-Methode wird einmal aufgerufen, wenn das Skript aktiviert wird
     void Start()
     {
-        // Hole die Rigidbody2D-Komponente beim Start
-        rb = GetComponent<Rigidbody2D>();
-    }    
+        // Da die Spielerbewegung entfernt wurde, wird rb nicht mehr benötigt.
+        // Falls du es für andere Zwecke im Skript nutzen solltest, bitte prüfen.
+        // Ansonsten kann diese Zeile entfernt werden.
+        // rb = GetComponent<Rigidbody2D>();
+    }    
 
     // Die Update-Methode wird einmal pro Frame aufgerufen
     void Update()
     {
-
-        // ----- Spielerbewegung -----
-        // Hole die Eingaben des Spielers für die horizontale (A/D oder Pfeiltasten links/rechts)
-        // und vertikale (W/S oder Pfeiltasten hoch/runter) Achse
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
-
-        // Erstelle einen 2D-Vektor für die Bewegungsrichtung
-        Vector2 movement = new Vector2(moveX, moveY).normalized; // .normalized sorgt für gleichbleibende Geschwindigkeit bei Diagonalbewegungen
-
-        // Setze die Geschwindigkeit des Rigidbody2D
-        rb.linearVelocity = movement * moveSpeed;
-
-        // ----- Interaktionsabfrage (ist bereits da, bleibt unverändert) -----
-        // if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null)
-        // {
-        //     InteractWithObject(currentInteractable);
-        // }
-        
         // Prüfen, ob die "E"-Taste (oder eine andere Taste, die ihr wollt) gedrückt wurde
         // UND ob es ein Objekt gibt, mit dem wir gerade interagieren können
         if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null)
@@ -96,6 +72,7 @@ public class InteractionController : MonoBehaviour
         {
             HandleDoorInteraction();
         }
+        // !!! WICHTIG: Hier müssen wir später die Logik für Teleporter hinzufügen !!!
     }
 
     // ----- Spezifische Interaktions-Funktionen (noch leer) -----
