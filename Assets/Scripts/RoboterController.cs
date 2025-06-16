@@ -185,8 +185,8 @@ public class RoboterController : MonoBehaviour
                 }
             }
 
-            Debug.Log("Phase: " + rectPhase);
-            Debug.Log("Vertical: " + moveVert + " | Direction: " + rectDirection);
+            // Debug.Log("Phase: " + rectPhase);
+            // Debug.Log("Vertical: " + moveVert + " | Direction: " + rectDirection);
         }
     }
 }

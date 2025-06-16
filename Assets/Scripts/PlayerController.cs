@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     float lookRight = 0f;
 
     public int maxCredits = 3;
-    int currentCredits = 0;
+    public int currentCredits = 0;
 
 
     // Start is called before the first frame update
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         {
             rotateObject(lookRight);
         }
-            Debug.Log(move);
+            // Debug.Log(move);
     }
 
         void FixedUpdate()

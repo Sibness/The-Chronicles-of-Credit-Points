@@ -509,7 +509,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gamedev_book_0: -3202901529627038071
+      gamedev_book_1: 8410246206896301294
+      gamedev_book_10: 5372684456653030397
+      gamedev_book_11: -6856038510157103359
+      gamedev_book_12: -3015029278765649549
+      gamedev_book_13: 8485374545924612545
+      gamedev_book_14: 8413807598300350879
+      gamedev_book_15: -1652650329926279995
+      gamedev_book_2: -8474352148760779235
+      gamedev_book_3: 3562893377531271102
+      gamedev_book_4: 7706761658232388608
+      gamedev_book_5: -8662079111542003064
+      gamedev_book_6: -651758922489736703
+      gamedev_book_7: -609325151909897091
+      gamedev_book_8: 2897360540215659534
+      gamedev_book_9: 3807756995310472463
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

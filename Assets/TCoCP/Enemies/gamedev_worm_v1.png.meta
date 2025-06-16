@@ -509,7 +509,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gamedev_worm_v1_0: 4822568942700076234
+      gamedev_worm_v1_1: 7010033225496200757
+      gamedev_worm_v1_10: 614009529476671159
+      gamedev_worm_v1_11: -3039508914005076474
+      gamedev_worm_v1_12: 5732999537296236650
+      gamedev_worm_v1_13: 5746922925658055578
+      gamedev_worm_v1_14: -7299664404154952805
+      gamedev_worm_v1_15: 6715873510955325589
+      gamedev_worm_v1_2: -8312032180494365650
+      gamedev_worm_v1_3: 7055199896013994368
+      gamedev_worm_v1_4: -1832618930249495146
+      gamedev_worm_v1_5: -599609865569932293
+      gamedev_worm_v1_6: -1839665424059047968
+      gamedev_worm_v1_7: -590197558964097802
+      gamedev_worm_v1_8: 6930488283956625321
+      gamedev_worm_v1_9: -72628699033123888
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
