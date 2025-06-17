@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
             _animator.SetBool("isRunningRight", false);
         }
         
-             Debug.Log(move);
+             //Debug.Log(move);
     }
 
         void FixedUpdate()
