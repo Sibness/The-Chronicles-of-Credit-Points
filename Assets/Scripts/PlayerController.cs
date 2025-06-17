@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     private PlayerTeleporter playerTeleporter;
     public InputAction MoveAction;
 
+    [SerializeField] private Animator _animator;
+
 
     Rigidbody2D rigidbody2d;
     Vector2 move;
@@ -38,15 +40,63 @@ public class PlayerController : MonoBehaviour
     {
         move = MoveAction.ReadValue<Vector2>();
 
-        if (move.x < 0)
+        //Start Move-Up-Animation
+        if (move.y == -1f && move.x == 0)
         {
-            rotateObject(lookLeft);
+            _animator.SetBool("isRunningForward", true);
+
+            _animator.SetBool("isRunningBackwards", false);
+            _animator.SetBool("isRunningLeft", false);
+            _animator.SetBool("isRunningRight", false);
         }
-        else if (move.x > 0)
+
+        //Start Move-Down-Animation
+        if(move.y == 1f && move.x == 0)
         {
-            rotateObject(lookRight);
+            _animator.SetBool("isRunningBackwards", true);
+
+            _animator.SetBool("isRunningForward", false);
+            _animator.SetBool("isRunningLeft", false);
+            _animator.SetBool("isRunningRight", false);
         }
-            // Debug.Log(move);
+
+        /*
+         * Move-Left-Animation Starts whenever x is smaler 0. 
+         * The y-Variable value is irrelevant for the sidewards movement because it's got priority
+         */
+
+        if(move.x < 0)
+        {
+            _animator.SetBool("isRunningLeft", true);
+
+            _animator.SetBool("isRunningBackwards", false);
+            _animator.SetBool("isRunningForward", false);
+            _animator.SetBool("isRunningRight", false);
+        }
+
+        /*
+         * Move-Right-Animation Starts whenever x is smaler 0. 
+         * The y-Variable value is irrelevant for the sidewards movement because it's got priority
+         */
+        if (move.x > 0)
+        {
+            _animator.SetBool("isRunningRight", true);
+            
+            _animator.SetBool("isRunningBackwards", false);
+            _animator.SetBool("isRunningForward", false);
+            _animator.SetBool("isRunningLeft", false);
+        }
+
+        //If the Player stands still, all animations should stop!
+        if (move.y == 0 && move.x == 0)
+        {
+            _animator.SetBool("isRunningBackwards", false);
+            _animator.SetBool("isRunningForward", false);
+            _animator.SetBool("isRunningLeft", false);
+            _animator.SetBool("isRunningRight", false);
+        }
+        
+             Debug.Log(move);
     }
 
         void FixedUpdate()

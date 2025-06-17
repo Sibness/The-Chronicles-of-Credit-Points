@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8764567348254571926}
   - component: {fileID: 2747254925862761075}
   - component: {fileID: 6761818367593042971}
+  - component: {fileID: 8355915698870356130}
   m_Layer: 0
   m_Name: gamedev_worm_v1_0
   m_TagString: Untagged
@@ -178,3 +179,25 @@ MonoBehaviour:
   direction: {x: 1, y: 0}
   speed: 3
   maxDistance: 10
+--- !u!95 &8355915698870356130
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7393795954923540770}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1a32e1347a1b14447b0ef6e3b152f4d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -32,12 +32,57 @@ public class RoboterController : MonoBehaviour
     private int rectDirection = 1; //Acts differently as the normal direction var and is only used for Rectangular Movement!
     private bool moveVert = true;
     int count = 0;
+
+
+    /*
+     * Animation Variable Section
+     */
+    public float checkInterval = 0.1f; // How many Times the Position from the Robot is checked!
+
+    private Vector2 lastPosition;
+    private Animator animator;
+    private float checkTimer = 0f;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rigidbody2 = GetComponent<Rigidbody2D>();
         time = coverUnits / speed; //This comes from the Formula v = s * t
         waypointMover = gameObject.AddComponent<WaypointMover>();
+
+        lastPosition = transform.position;
+        animator = GetComponent<Animator>();
+    }
+
+    void SetDirectionBooleans(Vector2 delta)
+    {
+        // Standardm‰ﬂig alle Richtungen deaktivieren
+        animator.SetBool("Right", false);
+        animator.SetBool("Left", false);
+        animator.SetBool("Up", false);
+        animator.SetBool("Down", false);
+
+        if (delta.magnitude < 0.01f)
+        {
+            // Keine Bewegung = Idle, alle Richtungsflags bleiben false
+            return;
+        }
+
+        if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
+        {
+            if (delta.x > 0)
+                animator.SetBool("Right", true);
+            else
+                animator.SetBool("Left", true);
+        }
+        else
+        {
+            if (delta.y > 0)
+                animator.SetBool("Up", true);
+            else
+                animator.SetBool("Down", true);
+        }
     }
 
     // Update is called once per frame
@@ -45,6 +90,20 @@ public class RoboterController : MonoBehaviour
     {
         // Just sets and resets the timer
         Timer();
+
+        //This is the section where the Animation of the Robot is getting startet
+        checkTimer += Time.deltaTime;
+
+        if (checkTimer >= checkInterval)
+        {
+            Vector2 currentPosition = transform.position;
+            Vector2 delta = currentPosition - lastPosition;
+
+            SetDirectionBooleans(delta);
+
+            lastPosition = currentPosition;
+            checkTimer = 0f;
+        }
     }
 
     private void FixedUpdate()
