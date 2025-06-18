@@ -2,11 +2,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class OptionsMenuManager : MonoBehaviour
 {
     public GameObject optionsMenu;
     public GameObject defaultSelectedButton;
+    public AudioMixer audioMixer;
 
     private bool isOpen = false;
 
@@ -51,5 +53,11 @@ public class OptionsMenuManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("StartScreen");
+    }
+
+    public void SetVolume (float volume)
+    {
+        Debug.Log(volume); //TODO REMOVE THIS LINE
+        audioMixer.SetFloat("volume", volume);
     }
 }
