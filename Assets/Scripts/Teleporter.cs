@@ -36,7 +36,7 @@ public class Teleporter : MonoBehaviour
         PlayerTeleporter.setIndex(PlayerTeleporter.CurrentIndex + 1);
         // Teleport the player to the next spawn point
         teleporter.Teleport();
-        playerController.ChangeCredits(0); // Reset the player's credits after teleporting
+        playerController.currentCredits = 0; // Reset the player's credits after teleporting
     }
 
 }
