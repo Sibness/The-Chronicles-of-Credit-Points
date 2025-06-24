@@ -10,10 +10,13 @@ public class LaptopInteractable : MonoBehaviour
     private bool playerInRange = false;
     private bool isDeactivated = false;
 
+    private AudioManager audioManager;
+
     void Start()
     {
         interactionIcon.SetActive(false);
         moveAction.Enable();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     void Update()
@@ -28,6 +31,7 @@ public class LaptopInteractable : MonoBehaviour
     {
         isDeactivated = true;
         interactionIcon.SetActive(false);
+        audioManager.PlaySFX(audioManager.laptop_button);
 
         foreach (var virus in viruses)
         {

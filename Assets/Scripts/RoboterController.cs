@@ -33,6 +33,8 @@ public class RoboterController : MonoBehaviour
     private bool moveVert = true;
     int count = 0;
 
+    private AudioManager audioManager;
+
 
     /*
      * Animation Variable Section
@@ -53,6 +55,8 @@ public class RoboterController : MonoBehaviour
 
         lastPosition = transform.position;
         animator = GetComponent<Animator>();
+
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     void SetDirectionBooleans(Vector2 delta)
@@ -179,6 +183,7 @@ public class RoboterController : MonoBehaviour
         PlayerController controller = collision.GetComponent<PlayerController>();
         if (controller != null)
         {
+            audioManager.PlaySFX(audioManager.death);
             controller.Pt.Teleport();
         }
     }

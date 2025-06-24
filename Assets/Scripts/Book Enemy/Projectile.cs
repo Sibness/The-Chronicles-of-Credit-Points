@@ -7,11 +7,13 @@ public class Projectile : MonoBehaviour
     public float maxDistance = 10f;
 
     private Vector3 startPosition;
+    private AudioManager audioManager;
 
     void Start()
     {
         startPosition = transform.position;
         direction.Normalize();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     void Update()
@@ -31,6 +33,7 @@ public class Projectile : MonoBehaviour
             PlayerController controller = collision.GetComponent<PlayerController>();
             if (controller != null)
             {
+                audioManager.PlaySFX(audioManager.death);
                 controller.Pt.Teleport(); // Spieler teleportieren
                 Destroy(gameObject);
             }

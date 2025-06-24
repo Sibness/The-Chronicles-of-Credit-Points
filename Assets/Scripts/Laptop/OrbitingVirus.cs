@@ -7,12 +7,13 @@ public class OrbitingVirus : MonoBehaviour
     public float speed = 50f;           // Winkelgeschwindigkeit (°/Sekunde)
     public float angleOffset = 0f;      // Startwinkel in Grad
     public bool clockwise = true;       // Drehrichtung (true = Uhrzeigersinn)
-
+    private AudioManager audioManager;
     private float angle;
 
     void Start()
     {
         angle = angleOffset;
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     void Update()
@@ -36,6 +37,7 @@ public class OrbitingVirus : MonoBehaviour
             PlayerController controller = collision.GetComponent<PlayerController>();
             if (controller != null)
             {
+                audioManager.PlaySFX(audioManager.death);
                 controller.Pt.Teleport(); // Spieler teleportieren
             }
         }

@@ -55,9 +55,12 @@ public class OptionsMenuManager : MonoBehaviour
         SceneManager.LoadScene("StartScreen");
     }
 
-    public void SetVolume (float volume)
+    public void SetVolume(float volume)
     {
-        Debug.Log(volume); //TODO REMOVE THIS LINE
-        audioMixer.SetFloat("volume", volume);
+        Debug.Log(volume);
+        Debug.Log("SliderValue: " + volume);
+
+        float dB = Mathf.Log10(volume) * 20f;
+        audioMixer.SetFloat("volume", dB);
     }
 }
