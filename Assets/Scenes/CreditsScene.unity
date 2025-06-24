@@ -330,7 +330,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 44.875122, y: -2690}
+  m_AnchoredPosition: {x: 44.875122, y: -2568}
   m_SizeDelta: {x: 620.999, y: 1857.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &681680089
@@ -385,20 +385,22 @@ MonoBehaviour:
     Art & Visual Design
 
 
-    Additional Support
-
-
-    Special
-    Thanks
-
-
     Tools & Licenses
 
 
+
+
+    Fonts
+
+
+
+    Audio
+    Assets
+
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7779280a740f41e4e86c61e98eb16fa9, type: 2}
+  m_sharedMaterial: {fileID: 2667085855045404197, guid: 7779280a740f41e4e86c61e98eb16fa9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1191,8 +1193,8 @@ MonoBehaviour:
     developed by students of the Game Development course at Hochschule Bonn-Rhein-Sieg,
     under the guidance of Prof. Dr. Heiden"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7779280a740f41e4e86c61e98eb16fa9, type: 2}
+  m_sharedMaterial: {fileID: 2667085855045404197, guid: 7779280a740f41e4e86c61e98eb16fa9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1303,7 +1305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 677, y: -2690}
+  m_AnchoredPosition: {x: 677, y: -2568}
   m_SizeDelta: {x: 533.988, y: 1857.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1794399862
@@ -1340,12 +1342,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\r\rSebastian Schmitz\n\r\n\n\nSebastian Schmitz\r\nChristian Kahnt\n\r\n\r\rSebastian
-    Schmitz\r\nChristian Kahnt\r\nJan Hendrik R\xF6sler\n\r\r\r\nJohanna H\xF6hlein\n\r\n\rJohanna
-    H\xF6hlein\n\r\r\r\nJan Hendrik R\xF6sler\n\r\r\r\n(tbd)\n\r\r\r\nUnity 6.1\r\nGitHub\r\nAseprite\r\nAudio
-    library (tbd)\r\nFonts (tbd)"
+    Schmitz\r\nChristian Kahnt\r\nJan Hendrik Roesler\n\r\r\r\nJohanna Hoehlein\n\r\n\rJohanna
+    Hoehlein\n\r\r\r\nUnity 6.1\r\nGitHub\r\nAseprite\n\r\n\rLiberationSans\nPixellari\n\nUI
+    Sfx 8-Bit Pack\nFree Casual Game SFX Pack"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7779280a740f41e4e86c61e98eb16fa9, type: 2}
+  m_sharedMaterial: {fileID: 2667085855045404197, guid: 7779280a740f41e4e86c61e98eb16fa9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
