@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minCount: 3
-  maxCount: 5
+  maxCount: 3
   virusPrefab: {fileID: 45388300000796459, guid: ab7ae0b875f5383f2a37fb0dbe119f0c, type: 3}
   laptopInteractable: {fileID: 473714017033669770}
 --- !u!58 &514970235302578294

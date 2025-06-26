@@ -9,6 +9,7 @@ public class SceneTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            PlayerTeleporter.setIndex(0);
             SceneManager.LoadScene(sceneToLoad);
         }
     }
