@@ -394,6 +394,17 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &271289045 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6313416825910492168, guid: 8007aa13adef8cc4a97923c8517ea95d, type: 3}
+  m_PrefabInstance: {fileID: 1819737476}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &670794069 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1306517737822712256, guid: 8007aa13adef8cc4a97923c8517ea95d, type: 3}
@@ -670,7 +681,7 @@ MonoBehaviour:
   SFXSource: {fileID: 865256811}
   game_background: {fileID: 0}
   menu_background: {fileID: 0}
-  coin: {fileID: 8300000, guid: 7407ba2b60baba14b84f4b725e06550a, type: 3}
+  coin: {fileID: 8300000, guid: 1be2fcc16ab0da84f99ba7c633037620, type: 3}
   level_completed: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
   laptop_button: {fileID: 8300000, guid: c38a4ee639ad00b459a0c33300fb4645, type: 3}
   death: {fileID: 8300000, guid: 98e4c0948ee45af44bc34f8ef0e5edcd, type: 3}
@@ -1260,6 +1271,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c64ae20672f23246b7a6cb06c3b3039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1727833709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727833704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a422c41255500a4595875565de110cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSlider: {fileID: 271289045}
+  sfxSlider: {fileID: 271289045}
 --- !u!1001 &1819737476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1959,6 +1984,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3267512598997058301, guid: 8007aa13adef8cc4a97923c8517ea95d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1727833706}
+    - targetCorrespondingSourceObject: {fileID: 3267512598997058301, guid: 8007aa13adef8cc4a97923c8517ea95d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1727833709}
     - targetCorrespondingSourceObject: {fileID: 1306517737822712256, guid: 8007aa13adef8cc4a97923c8517ea95d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 670794071}

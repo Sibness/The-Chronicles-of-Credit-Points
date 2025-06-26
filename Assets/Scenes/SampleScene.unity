@@ -68383,6 +68383,20 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5927663689943606728, guid: 8007aa13adef8cc4a97923c8517ea95d, type: 3}
   m_PrefabInstance: {fileID: 7130416758178532934}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1845013288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845013286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a422c41255500a4595875565de110cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSlider: {fileID: 7130416758178532935}
+  sfxSlider: {fileID: 7130416758178532935}
 --- !u!4 &1853086614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3285680167989415446, guid: 8eb4501802064284fb27c73c78f361b6, type: 3}
@@ -71210,6 +71224,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 513745780}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3267512598997058301, guid: 8007aa13adef8cc4a97923c8517ea95d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1845013288}
     - targetCorrespondingSourceObject: {fileID: 1306517737822712256, guid: 8007aa13adef8cc4a97923c8517ea95d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1365685324}
@@ -71223,6 +71240,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 432244654}
   m_SourcePrefab: {fileID: 100100000, guid: 8007aa13adef8cc4a97923c8517ea95d, type: 3}
+--- !u!114 &7130416758178532935 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6313416825910492168, guid: 8007aa13adef8cc4a97923c8517ea95d, type: 3}
+  m_PrefabInstance: {fileID: 7130416758178532934}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7579787924909989914
 PrefabInstance:
   m_ObjectHideFlags: 0

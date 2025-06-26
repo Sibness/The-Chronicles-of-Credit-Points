@@ -32,14 +32,21 @@ public class AudioManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            // Lautstärke aus PlayerPrefs laden
+            float savedMusicVolume = PlayerPrefs.GetFloat("MusicVolume", 1f);
+            float savedSFXVolume = PlayerPrefs.GetFloat("SFXVolume", 1f);
+
+            musicSource.volume = savedMusicVolume;
+            SFXSource.volume = savedSFXVolume;
+
+            PlayMenuMusicImmediate(); // Sofortiger Start beim ersten Laden
         }
         else
         {
             Destroy(gameObject);
             return;
         }
-
-        PlayMenuMusicImmediate(); // Sofortiger Start beim ersten Laden
     }
 
     private void OnEnable()
@@ -64,13 +71,16 @@ public class AudioManager : MonoBehaviour
             if (musicSource.clip != game_background)
                 StartCoroutine(FadeToNewClip(game_background));
         }
+
+        // Beim Szenenwechsel sicherstellen, dass Volume korrekt bleibt
+        musicSource.volume = PlayerPrefs.GetFloat("MusicVolume", 1f);
+        SFXSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1f);
     }
 
     private void PlayMenuMusicImmediate()
     {
         musicSource.clip = menu_background;
         musicSource.loop = true;
-        musicSource.volume = 1f;
         musicSource.Play();
     }
 
@@ -102,7 +112,7 @@ public class AudioManager : MonoBehaviour
 
     private IEnumerator FadeIn()
     {
-        float targetVolume = 1f;
+        float targetVolume = PlayerPrefs.GetFloat("MusicVolume", 1f);
         musicSource.volume = 0f;
 
         for (float t = 0; t < fadeDuration; t += Time.unscaledDeltaTime)
@@ -127,10 +137,21 @@ public class AudioManager : MonoBehaviour
     public void SetMusicVolume(float volume)
     {
         musicSource.volume = volume;
+        PlayerPrefs.SetFloat("MusicVolume", volume); // Speichern
     }
 
     public void SetSFXVolume(float volume)
     {
         SFXSource.volume = volume;
+        PlayerPrefs.SetFloat("SFXVolume", volume); // Speichern
+    }
+        public void OnMusicVolumeChanged(float value)
+    {
+        AudioManager.Instance.SetMusicVolume(value);
+    }
+
+    public void OnSFXVolumeChanged(float value)
+    {
+        AudioManager.Instance.SetSFXVolume(value);
     }
 }
